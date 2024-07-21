@@ -83,7 +83,7 @@ type TCountry = {
     demonyms: TDemonyms
     fifa: string
     flag: string
-    flags: string[]
+    flags: { [format: string]: string }
     idd: TIdd
     independent: boolean
     landlocked: boolean

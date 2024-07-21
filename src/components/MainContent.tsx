@@ -17,17 +17,13 @@ function MainContent() {
                 // console.log("🚀 ~ useEffect ~ data:", data)
 
                 setCountries(data)
-                console.log('🚀 ~ useEffect ~ countries', countries)
+                // console.log('🚀 ~ useEffect ~ countries', countries)
             })
             .catch(error => {
                 console.log(error)
             })
     }, [])
 
-
-    //   .catch(error => {
-    //     console.log(error)
-    //   })
 
     return (
         <div className="flex flex-col bg-[#1B1D1F] w-[90%] mx-auto">
@@ -38,7 +34,7 @@ function MainContent() {
             <Select />
             <RegionList />
             <CheckBoxStatus />
-            <CountryArray />
+            <CountryArray countries={countries} />
         </div>
     )
 }
